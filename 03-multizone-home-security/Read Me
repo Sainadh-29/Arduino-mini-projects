@@ -1,0 +1,47 @@
+# Multi-Zone PIR Home Security System
+
+## Description
+An advanced home security system using multiple PIR motion sensors placed in 
+different zones/rooms. Each zone has its own dedicated buzzer, allowing 
+independent motion detection and alerting across multiple areas simultaneously.
+
+## Components Used
+- Arduino Uno R3
+- 4x PIR Motion Sensors
+- 4x Buzzers
+
+## Circuit Connections
+| Component | Arduino Pin |
+|-----------|-------------|
+| PIR Sensor 1 (OUT) | Digital Pin 2 |
+| PIR Sensor 2 (OUT) | Digital Pin 3 |
+| PIR Sensor 3 (OUT) | Digital Pin 4 |
+| PIR Sensor 4 (OUT) | Digital Pin 5 |
+| Buzzer 1 (+) | Digital Pin 8 |
+| Buzzer 2 (+) | Digital Pin 9 |
+| Buzzer 3 (+) | Digital Pin 10 |
+| Buzzer 4 (+) | Digital Pin 11 |
+
+## How It Works
+1. Each PIR sensor independently monitors its assigned zone for motion.
+2. When motion is detected in a zone, that zone's buzzer is triggered.
+3. Each zone operates independently — multiple zones can be triggered at once.
+4. Serial Monitor logs which zone detected motion, useful for tracking activity.
+
+## Code
+See [`code.ino`](./code.ino) for the full Arduino sketch.
+
+## Circuit Diagram
+![Circuit Diagram](./circuit.png)
+
+## Simulation
+This project was designed and tested using Tinkercad Circuits.
+[View live simulation](your-tinkercad-link-here)
+
+## Status
+⚠️ Pin mapping needs verification against actual Tinkercad code before final upload
+
+## Possible Improvements
+- Add a central "armed/disarmed" system-wide toggle
+- Add LED indicators per zone
+- Log events with timestamps via Serial Monitor
