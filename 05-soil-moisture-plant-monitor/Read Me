@@ -1,0 +1,46 @@
+# Soil Moisture-Based Plant Watering Alert System
+
+## Description
+An Arduino-based plant monitoring system that uses a soil moisture sensor to 
+detect when soil becomes too dry. When moisture drops below a set threshold, 
+an LED and buzzer alert the user that the plant needs watering.
+
+## Components Used
+- Arduino Uno R3
+- Soil Moisture Sensor
+- LED
+- Buzzer
+
+## Circuit Connections
+| Component | Arduino Pin |
+|-----------|-------------|
+| Soil Moisture Sensor (OUT) | Analog Pin A0 |
+| LED (+) | Digital Pin 7 |
+| Buzzer (+) | Digital Pin 8 |
+
+## How It Works
+1. The soil moisture sensor continuously reads the moisture level of the soil.
+2. The analog value is printed to the Serial Monitor every second.
+3. If the reading falls below the threshold (dry soil), the LED and buzzer 
+   turn ON to alert that watering is needed.
+4. If the soil is sufficiently moist, the LED and buzzer stay OFF.
+
+## Code
+See [`code.ino`](./code.ino) for the full Arduino sketch.
+
+## Circuit Diagram
+![Circuit Diagram](./circuit.png)
+
+## Simulation
+This project was designed and tested using Tinkercad Circuits.
+[View live simulation](your-tinkercad-link-here)
+
+## Status
+⚠️ Original simulation code only blinks an LED and does not read the sensor — 
+an updated version has been added that properly reads soil moisture and 
+triggers alerts (see code.ino)
+
+## Possible Improvements
+- Calibrate the threshold value using real dry/wet soil readings
+- Add a water pump relay for automatic watering
+- Log moisture trends over time
