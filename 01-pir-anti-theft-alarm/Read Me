@@ -1,0 +1,43 @@
+# PIR-Based Anti-Theft Alarm System
+
+## Description
+An Arduino-based motion detection alarm system that uses a PIR (Passive Infrared) 
+sensor to detect movement. When motion is detected, a buzzer is triggered instantly 
+as an alert, making it a simple foundation for anti-theft or intrusion detection systems.
+
+## Components Used
+- Arduino Uno R3
+- PIR Motion Sensor
+- Buzzer
+- Breadboard
+- Jumper Wires
+
+## Circuit Connections
+| Component | Arduino Pin |
+|-----------|-------------|
+| PIR Sensor (OUT) | Digital Pin 13 |
+| Buzzer (+) | Digital Pin 8 |
+
+## How It Works
+1. The PIR sensor continuously monitors the surrounding area for motion.
+2. When motion is detected, the sensor outputs a HIGH signal.
+3. The Arduino reads this signal and immediately activates the buzzer (ALARM pin).
+4. When no motion is detected, the buzzer remains OFF.
+
+## Code
+See [`code.ino`](./code.ino) for the full Arduino sketch.
+
+## Circuit Diagram
+![Circuit Diagram](./circuit.png)
+
+## Simulation
+This project was designed and tested using Tinkercad Circuits.
+[View live simulation](your-tinkercad-link-here)
+
+## Status
+✅ Tested and working in simulation
+
+## Possible Improvements
+- Add a buzzer delay/hold time so the alarm doesn't stop the instant motion pauses
+- Add an LED indicator alongside the buzzer
+- Add a reset/disarm button
