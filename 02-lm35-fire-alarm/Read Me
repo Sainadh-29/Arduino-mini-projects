@@ -1,0 +1,42 @@
+# LM35 Temperature-Based Fire Alarm
+
+## Description
+An Arduino-based fire/overheat alarm system that uses an LM35 temperature sensor 
+to continuously monitor ambient temperature. When the temperature crosses a set 
+threshold, a buzzer is triggered as an alert.
+
+## Components Used
+- Arduino Uno R3
+- LM35 Temperature Sensor
+- Buzzer
+
+## Circuit Connections
+| Component | Arduino Pin |
+|-----------|-------------|
+| LM35 (OUT) | Analog Pin A1 |
+| Buzzer (+) | Digital Pin 8 |
+
+## How It Works
+1. The LM35 sensor continuously outputs an analog voltage proportional to temperature.
+2. The Arduino reads this value and converts it to degrees Celsius.
+3. The temperature is printed to the Serial Monitor every second.
+4. If temperature reaches or exceeds 45°C, the buzzer turns ON.
+5. If temperature drops below 45°C, the buzzer turns OFF.
+
+## Code
+See [`code.ino`](./code.ino) for the full Arduino sketch.
+
+## Circuit Diagram
+![Circuit Diagram](./circuit.png)
+
+## Simulation
+This project was designed and tested using Tinkercad Circuits.
+[View live simulation](your-tinkercad-link-here)
+
+## Status
+⚠️ Working with a known issue — see below
+
+## Known Issues / Improvements
+- `pinMode(BUZ, OUTPUT);` is missing from `setup()` — should be added for the buzzer to work reliably
+- Serial monitor currently shows a fixed/incorrect reading; LM35 wiring and analog pin should be rechecked
+- Threshold (45°C) can be adjusted based on real-world testing
