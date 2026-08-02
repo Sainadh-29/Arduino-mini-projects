@@ -1,0 +1,43 @@
+# 3-LED Sequential Blinking (Traffic Light Pattern)
+
+## Description
+A simple Arduino project that blinks three LEDs (red, yellow, green) in sequence, 
+simulating a basic traffic light pattern. Each LED turns on and off with a 500ms 
+delay before moving to the next one in the cycle.
+
+## Components Used
+- Arduino Uno R3
+- 3x LEDs (Red, Yellow, Green)
+- 3x Resistors (current-limiting)
+
+## Circuit Connections
+| Component | Arduino Pin |
+|-----------|-------------|
+| Red LED | Digital Pin 13 |
+| Yellow LED | Digital Pin 12 |
+| Green LED | Digital Pin 11 |
+
+## How It Works
+1. Red LED turns ON for 500ms, then OFF.
+2. Yellow LED turns ON for 500ms, then OFF.
+3. Green LED turns ON for 500ms, then OFF.
+4. The cycle repeats continuously.
+5. Serial Monitor logs each LED's ON/OFF state for tracking.
+
+## Code
+See [`code.ino`](./code.ino) for the full Arduino sketch.
+
+## Circuit Diagram
+![Circuit Diagram](./circuit.png)
+
+## Simulation
+This project was designed and tested using Tinkercad Circuits.
+[View live simulation](your-tinkercad-link-here)
+
+## Status
+✅ Tested and working in simulation (verify lines 6+ against original code)
+
+## Possible Improvements
+- Adjust timing to mimic a real traffic light sequence (e.g., green longer than yellow)
+- Add a pedestrian crossing button
+- Randomize or add PWM fading between states
